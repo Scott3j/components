@@ -1,0 +1,4 @@
+{
+	"svelte.plugin.svelte.format.config.printWidth": 60,
+	"svelte.plugin.svelte.format.config.svelteIndentScriptAndStyle": false
+}
