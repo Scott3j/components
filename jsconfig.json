@@ -5,6 +5,7 @@
 		"moduleResolution": "node",
 		"target": "esnext",
 		"module": "esnext",
+    "outDir": "dist",
 		"importsNotUsedAsValues": "error",
 		"isolatedModules": true,
 		"resolveJsonModule": true,
