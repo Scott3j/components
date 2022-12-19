@@ -81,7 +81,7 @@
 
 <style>
 	.widgets {
-		background: rgb(var(--bg6) / 33%);
+		background: rgb(var(--bg6) / 3%);
 		backdrop-filter: blur(1.5rem);
 		position: absolute;
 		inset: 12px;

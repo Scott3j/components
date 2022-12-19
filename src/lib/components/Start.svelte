@@ -36,33 +36,39 @@
 
 <div
 	class="start activeShadow"
-	transition:fly={{ x: -1100, duration: 300, opacity: 1 }}>
+	transition:fly={{ x: -1100, duration: 300, opacity: 1 }}
+>
 	<div class="topCont">
 		<TextBox
 			placeholder="Type here to search"
-			on:click={() => ($activeThing = 'Search')} />
+			on:click={() => ($activeThing = 'Search')}
+		/>
 		{#if !allApps}
 			<div
 				class="appCont"
 				in:fly={{ x: -32, duration: 125, delay: 125 }}
-				out:fly={{ x: -79, duration: 125 }}>
+				out:fly={{ x: -79, duration: 125 }}
+			>
 				<div class="pinned">
 					<div class="head">
 						<h4>Pinned</h4>
 						<Button on:click={() => (allApps = true)}
-							>All Apps &gt;</Button>
+							>All Apps &gt;</Button
+						>
 					</div>
 					<div class="pinAppsGrid">
 						{#each $appList as app}
 							<div
 								class="pnApp hvrBgLight"
 								on:click={() => toggleOpenApp(app)}
-								on:keypress={() => toggleOpenApp(app)}>
+								on:keypress={() => toggleOpenApp(app)}
+							>
 								<img
 									src="src/img/icon/{app}.png"
 									alt=""
 									height="32"
-									width="32" />
+									width="32"
+								/>
 								{app}
 							</div>
 						{/each}
@@ -77,12 +83,14 @@
 							<div
 								class="recApp hvrBgLight"
 								on:click={() => toggleOpenApp(app)}
-								on:keypress={() => toggleOpenApp(app)}>
+								on:keypress={() => toggleOpenApp(app)}
+							>
 								<img
 									src="src/img/icon/{app}.png"
 									alt=""
 									height="32"
-									width="32" />
+									width="32"
+								/>
 								{app}
 							</div>
 						{/each}
@@ -93,23 +101,27 @@
 			<div
 				class="allApps"
 				in:fly={{ x: 32, duration: 125, delay: 125 }}
-				out:fly={{ x: 32, duration: 125 }}>
+				out:fly={{ x: 32, duration: 125 }}
+			>
 				<div class="head">
 					<h4>All apps</h4>
 					<Button on:click={() => (allApps = false)}
-						>&lt; Back</Button>
+						>&lt; Back</Button
+					>
 				</div>
 				<div class="appList">
 					{#each $appList as app}
 						<div
 							class="allApp hvrBgLight"
 							on:click={() => toggleOpenApp(app)}
-							on:keypress={() => toggleOpenApp(app)}>
+							on:keypress={() => toggleOpenApp(app)}
+						>
 							<img
-								src="src/img/icon/{app}.png"
+								src="src/img/icon/ui/{app}.svg"
 								alt=""
-								height="24"
-								width="24" />
+								height="20"
+								width="20"
+							/>
 							{app}
 						</div>
 					{/each}
@@ -125,8 +137,9 @@
 					src="src/img/apps/settings/defAccount.webp"
 					height="32"
 					width="32"
-					alt="" />
-				Yashash
+					alt=""
+				/>
+				Scott Jensen
 			</div>
 			<svelte:fragment slot="flyout">
 				<MenuFlyoutItem>
@@ -135,7 +148,8 @@
 						src="src/img/icon/ui/person.svg"
 						height="20"
 						width="20"
-						alt="" />
+						alt=""
+					/>
 					Change account settings
 				</MenuFlyoutItem>
 				<MenuFlyoutItem>
@@ -144,7 +158,8 @@
 						src="src/img/icon/ui/lock.svg"
 						height="20"
 						width="20"
-						alt="" />
+						alt=""
+					/>
 					Lock
 				</MenuFlyoutItem>
 				<MenuFlyoutItem>
@@ -153,7 +168,8 @@
 						src="src/img/icon/ui/signOut.svg"
 						height="20"
 						width="20"
-						alt="" />
+						alt=""
+					/>
 					Sign Out
 				</MenuFlyoutItem>
 			</svelte:fragment>
@@ -165,7 +181,8 @@
 					src="src/img/icon/ui/powerButton.svg"
 					height="20"
 					width="20"
-					alt="" />
+					alt=""
+				/>
 			</div>
 			<svelte:fragment slot="flyout">
 				<MenuFlyoutItem>
@@ -174,7 +191,8 @@
 						src="src/img/icon/ui/moon.svg"
 						height="18"
 						width="18"
-						alt="" />
+						alt=""
+					/>
 					Sleep
 				</MenuFlyoutItem>
 				<MenuFlyoutItem>
@@ -183,7 +201,8 @@
 						src="src/img/icon/ui/powerButton.svg"
 						height="18"
 						width="18"
-						alt="" />
+						alt=""
+					/>
 					Shut Down
 				</MenuFlyoutItem>
 				<MenuFlyoutItem>
@@ -192,7 +211,8 @@
 						src="src/img/icon/ui/arrowAntiClockwise.svg"
 						height="18"
 						width="18"
-						alt="" />
+						alt=""
+					/>
 					Restart
 				</MenuFlyoutItem>
 			</svelte:fragment>
@@ -204,19 +224,19 @@
 	.start {
 		position: absolute;
 		bottom: 12px;
-		left: calc(50% - 320px);
+		left: calc(50% - 620px);
 		width: 640px;
 		height: min(100% - 1.5rem, 720px);
 		border-radius: 8px;
-		background: rgb(var(--bg2) / 85%);
-		backdrop-filter: blur(1.5rem);
+		background: rgb(var(--bg6) / 0%);
+		backdrop-filter: blur(0.5rem);
 	}
 	/* .start.left {
     left: 12px;
   } */
 
 	.topCont {
-		background: rgb(255 255 255 / 25%);
+		background: rgb(255 255 255 / 5%);
 		padding: 2rem 2rem 0;
 		height: min(100% - 64px, 656px);
 		overflow: hidden;

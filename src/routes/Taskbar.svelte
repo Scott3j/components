@@ -19,12 +19,14 @@
 	};
 
 	const taskApps = [
-		'File Explorer',
-		'Microsoft Edge',
+		'Explorer',
+		'Chrome',
 		'Settings',
 		'VS Code',
-    'Excalidraw',
-		'Notepad'
+		'Excalidraw',
+		'Notepad',
+		'Widgets',
+		'ActionCenter'
 	];
 </script>
 
@@ -39,8 +41,8 @@
 			<img
 				src="src/img/icon/ui/Start.svg"
 				alt="Start"
-				height="24"
-				width="24"
+				height="20"
+				width="20"
 			/>
 		</div>
 		<div
@@ -51,24 +53,12 @@
 		>
 			<img
 				src="src/img/icon/ui/search.svg"
-				alt="Start"
+				alt="Search"
 				height="16"
 				width="16"
 			/>
 		</div>
-		<div
-			class="taskIcon hvrBgLight"
-			class:bgLight={$activeThing === 'Task View'}
-			on:click={() => toggleActiveThing('Task View')}
-			on:keypress={() => toggleActiveThing('Task View')}
-		>
-			<img
-				src="src/img/icon/ui/btEmpty.svg"
-				alt="Task View"
-				height="24"
-				width="24"
-			/>
-		</div>
+
 		<div
 			class="taskIcon widgetBtn hvrBgLight"
 			on:click={() => toggleActiveThing('Widgets')}
@@ -106,7 +96,7 @@
 					on:keypress={() => toggleOpenApp(app)}
 				>
 					<img
-						src="src/img/icon/{app}.png"
+						src="src/img/icon/ui/{app}.svg"
 						alt={app}
 						height="24"
 						width="24"
@@ -115,7 +105,7 @@
 			{/if}
 		{/each}
 	</div>
-<!---
+
 	<div class="right">
 		<div
 			class="actionCenterBtn hvrBgLight"
@@ -130,7 +120,6 @@
 			on:keypress={() => toggleActiveThing('Calendar')}
 		/>
 	</div>
--->
 </div>
 
 <style>

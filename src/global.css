@@ -58,7 +58,7 @@ body {
 }
 .hvrBgDark:hover,
 .bgDark {
-	background: rgb(0 0 0 / 6%);
+	background: rgba(176, 166, 166, 0.06);
 }
 
 .activeShadow {
@@ -126,11 +126,11 @@ body {
 
 	.hvrBgLight:hover,
 	.bgLight {
-		background: rgb(255 255 255 / 8%);
+		background: rgb(255 255 255 / 1%);
 	}
 	.hvrBgDark:hover,
 	.bgDark {
-		background: rgb(255 255 255 / 6%);
+		background: rgb(255 255 255 / 1%);
 	}
 
 	.icon {

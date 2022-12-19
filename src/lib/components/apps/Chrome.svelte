@@ -56,13 +56,13 @@
 </script>
 
 <div
-	class="edge activeShadow"
+	class="chrome activeShadow"
 	use:draggable={{
 		handle: '.mainToolbar'
 	}}
 	transition:scale={{ duration: 200 }}
 >
-	<Toolbar appName="Microsoft Edge" />
+	<Toolbar appName="Chrome" />
 	<div class="mainApp">
 		<div class="topBar">
 			<div class="addressBar">
@@ -145,7 +145,7 @@
 </div>
 
 <style>
-	.edge {
+	.chrome {
 		background: rgb(var(--bg7));
 		color: rgb(var(--clr));
 		position: absolute;

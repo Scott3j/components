@@ -17,7 +17,7 @@
 
 <div
 	class="actionCenter activeShadow"
-	transition:fly={{ y: 450, duration: 200, opacity: 1 }}
+	transition:fly={{ x: -850, duration: 200, opacity: 1 }}
 >
 	<div class="topCont">
 		<div class="btnCont">
@@ -55,7 +55,7 @@
 			</div>
 			<div class="slider">
 				<IconButton><Speaker /></IconButton>
-				<Slider bind:value={$speaker} />
+				<Slider class="slider" bind:value={$speaker} />
 			</div>
 		</div>
 	</div>
@@ -68,7 +68,7 @@
 	.actionCenter {
 		position: absolute;
 		bottom: 12px;
-		right: 12px;
+		left: 42px;
 		width: 360px;
 		border-radius: 8px;
 		overflow: hidden;

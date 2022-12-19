@@ -11,7 +11,7 @@
 	}}
 	transition:scale={{ duration: 200 }}
 >
-	<Toolbar appName="File Explorer" />
+	<Toolbar appName="Explorer" />
 
 	<div class="mainApp">
 		<h1>Work In Progress</h1>

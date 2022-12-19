@@ -10,8 +10,8 @@
 		'Settings',
 		'Camera',
 		'Calculator',
-		'File Explorer',
-		'Microsoft Store'
+		'Explorer',
+		'Marketplace'
 	];
 
 	const toggleOpenApp = (app) => {
@@ -28,7 +28,8 @@
 1
 <div
 	class="search activeShadow"
-	transition:fly={{ x: -800, duration: 100, opacity: 1 }}>
+	transition:fly={{ x: -800, duration: 100, opacity: 1 }}
+>
 	<TextBox placeholder="Type here to search" autofocus />
 
 	<div class="searchType">
@@ -45,12 +46,14 @@
 			<div
 				class="topApp hvrBgLight"
 				on:click={() => toggleOpenApp(app)}
-				on:keypress={() => toggleOpenApp(app)}>
+				on:keypress={() => toggleOpenApp(app)}
+			>
 				<img
 					src="../../src/img/icon/ui/{app}.svg"
 					alt=""
 					height="20"
-					width="20" />
+					width="20"
+				/>
 				{app}
 			</div>
 		{/each}

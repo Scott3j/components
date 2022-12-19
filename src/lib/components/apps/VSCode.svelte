@@ -8,12 +8,14 @@
 	use:draggable={{
 		handle: '.mainToolbar'
 	}}
-	transition:scale={{ duration: 200 }}>
+	transition:scale={{ duration: 200 }}
+>
 	<div class="mainApp">
 		<iframe
 			title="VS Code"
-			src="https://stackblitz.com/github/yashash1511/win11Svelte?embed=1&file=src/App.svelte"
-			frameborder="0" />
+			src="https://stackblitz.com/edit/sveltejs-kit-template-default-deqhmd?embed=1&file=App.svelte"
+			frameborder="0"
+		/>
 	</div>
 </div>
 

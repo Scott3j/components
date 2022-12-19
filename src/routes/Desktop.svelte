@@ -6,12 +6,15 @@
 		openedApps
 	} from '$lib/stores/store';
 
-
 	const dskApps = [
-		'Recycle Bin',
-		'Microsoft Edge',
-		'VS Code',
-    'Excalidraw'
+		//'Calculator',
+		// 'Camera',
+		// 'Explorer',
+		// 'Chrome',
+		// 'Microsoft Store',
+		//'Excalidraw',
+		//'Notepad',
+		// 'VS Code',
 	];
 
 	const toggleOpenApp = (/** @type {string} */ app) => {
@@ -31,12 +34,14 @@
 			<button
 				use:draggable={{ grid: [75, 98] }}
 				class="dskApp"
-				on:dblclick={() => toggleOpenApp(app)}>
+				on:dblclick={() => toggleOpenApp(app)}
+			>
 				<img
-					src="../../src/img/icon/{app}.png"
+					src="src/img/icon/ui/{app}.svg"
 					alt=""
 					height="48"
-					width="48" />
+					width="48"
+				/>
 				{app}
 			</button>
 		{/each}
@@ -54,19 +59,19 @@
 					<Camera />
 				{/await}
 			{/if}
-			{#if e === 'File Explorer'}
-				{#await import('../lib/components/apps/Explorer.svelte') then { default: Camera }}
-					<Camera />
+			{#if e === 'Explorer'}
+				{#await import('../lib/components/apps/Explorer.svelte') then { default: Explorer }}
+					<Explorer />
 				{/await}
 			{/if}
-			{#if e === 'Microsoft Edge'}
-				{#await import('../lib/components/apps/Edge.svelte') then { default: Edge }}
-					<Edge />
+			{#if e === 'Chrome'}
+				{#await import('../lib/components/apps/Chrome.svelte') then { default: Chrome }}
+					<Chrome />
 				{/await}
 			{/if}
 			{#if e === 'Microsoft Store'}
-				{#await import('../lib/components/apps/Store.svelte') then { default: Store }}
-					<Store />
+				{#await import('../lib/components/apps/Marketplace.svelte') then { default: Marketplace }}
+					<Marketplace />
 				{/await}
 			{/if}
 			{#if e === 'Notepad'}
@@ -84,7 +89,7 @@
 					<VSCode />
 				{/await}
 			{/if}
-      			{#if e === 'Excalidraw'}
+			{#if e === 'Excalidraw'}
 				{#await import('../lib/components/apps/Excalidraw.svelte') then { default: VSCode }}
 					<VSCode />
 				{/await}
@@ -116,7 +121,7 @@
 		{#await import('../lib/components/apps/VSCode.svelte') then { default: VSCode }}
 			<VSCode />
 		{/await}
-    		{#await import('../lib/components/apps/Excalidraw.svelte') then { default: Excalidraw }}
+		{#await import('../lib/components/apps/Excalidraw.svelte') then { default: Excalidraw }}
 			<Excalidraw />
 		{/await}
 	{/if}
@@ -124,7 +129,8 @@
 
 <div
 	class="brightoverlay"
-	style:background="rgb(0 0 0 / {100 - $brightness}%)" />
+	style:background="rgb(0 0 0 / {100 - $brightness}%)"
+/>
 
 <style>
 	.desktop {
@@ -143,7 +149,7 @@
 		grid-template-rows: repeat(auto-fill, 70px);
 		grid-auto-flow: column;
 		padding-top: 10px;
-    padding-right: 10px;
+		padding-right: 10px;
 		gap: 28px 1px;
 	}
 	.dskApp {
@@ -158,9 +164,8 @@
 		font-size: 12px;
 		text-align: center;
 		border-radius: 2px;
-		color: white;
-		text-shadow: 0 0 1px black, 0 0 2px black, 0 0 3px black,
-			0 0 4px black, 0 1px 1px black, 0 1px 2px black;
+		color: black;
+
 		-webkit-user-drag: element;
 	}
 	.dskApp:focus,

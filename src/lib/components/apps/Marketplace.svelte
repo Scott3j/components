@@ -7,13 +7,13 @@
 </script>
 
 <div
-	class="store activeShadow"
+	class="marketplace activeShadow"
 	use:draggable={{
 		handle: '.mainToolbar'
 	}}
 	transition:scale={{ duration: 200 }}
 >
-	<Toolbar appName="Microsoft Store" />
+	<Toolbar appName="Marketplace" />
 
 	<div class="mainApp">
 		<nav>
@@ -69,7 +69,7 @@
 </div>
 
 <style>
-	.store {
+	.marketplace {
 		background: var(--mica);
 		position: absolute;
 		inset: 10%;
