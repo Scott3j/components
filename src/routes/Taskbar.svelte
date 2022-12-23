@@ -19,6 +19,7 @@
 	};
 
 	const taskApps = [
+    'Box',
 		'Explorer',
 		'Chrome',
 		'Settings',

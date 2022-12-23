@@ -94,6 +94,11 @@
 					<VSCode />
 				{/await}
 			{/if}
+      			{#if e === 'Box'}
+				{#await import('../lib/components/shared/Box.svelte') then { default: Box }}
+					<Box />
+				{/await}
+			{/if}
 		{/each}
 	</div>
 

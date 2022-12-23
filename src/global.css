@@ -1,5 +1,5 @@
-/* @tailwind base; */
-/* @tailwind components; */
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
 
 * {
@@ -28,20 +28,7 @@
 		no-repeat fixed;
 }
 
-@font-face {
-	font-family: 'Segoe UI Variable';
-	src: url(./font/SegoeUI-VF.woff2) format('woff2'),
-		url(./font/SegoeUI-VF.woff) format('woff'),
-		url(./font/SegoeUI-VF.ttf) format('truetype');
-	font-display: swap;
-}
-@font-face {
-	font-family: 'settingsIcon';
-	src: url(./font/settingsIcon.woff2) format('woff2'),
-		url(./font/SegoeUI-VF.woff) format('woff'),
-		url(./font/SegoeUI-VF.ttf) format('truetype');
-	font-display: swap;
-}
+
 
 body {
 	background: url('./img/Background/Sunrise/img3.jpg') fixed
